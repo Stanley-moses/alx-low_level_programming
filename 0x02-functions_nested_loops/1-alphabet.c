@@ -1,20 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
-* main - check the code
+* print_alphabets - Print alphabets in lowercase, followed by a newline
 *
 * Return: Always 0.
 */
 
-int main(void)
+void print_alphabet(void);
 {
 char i;
 
 for (i = 'a'; i <= 'z'; i++)
-putchar(i);
-putchar('\n');
+_putchar(i);
+_putchar('\n');
 
 return (0);
 }
