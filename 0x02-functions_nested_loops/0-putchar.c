@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-* main - Prints _putchar
-* Description: It prints the word _putchar, followed by a new line
-* Return: 0
+* main - prints _putchar
+* Description: prints _putchar
+* Returns: 0
 */
-
 int main(void)
 {
 _putchar('_');
