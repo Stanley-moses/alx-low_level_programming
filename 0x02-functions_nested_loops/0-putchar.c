@@ -1,5 +1,6 @@
-#include <stdo.h>
-#include "_putchar.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
 * main - Check description
@@ -12,8 +13,8 @@ char word[8] = "_putchar";
 int i;
 
 for (i = 0; i < 8; i++)
-_putchar(word[i]);
-_putchar('\n');
+putchar(word[i]);
+putchar('\n');
 
 return (0);
 }
