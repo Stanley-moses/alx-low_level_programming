@@ -3,14 +3,14 @@
 #include <time.h>
 
 /**
-* main - Check if character is lowercase
+* _islower - Check if character is lowercase
 * @c: An input character
 * Description: function uses _putchar function to print
 * alphabet in lowercase 10 times
 * Return: 1 if is lowercase or 0 if is uppercase
 */
 
-int main(int c)
+int _islower(int c)
 {
 char i;
 int lower = 0;
