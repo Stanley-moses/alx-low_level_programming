@@ -1,17 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
-* main - check the code.
-*
+* print_alphabet_x10 - Prints 10x the alphabets in lowercase,
+* followed by a newline
 * Return: Always 0.
 */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 char i;
-char j;
+int j;
 
 for (j = 0; j < 10; j++)
 {
@@ -19,6 +17,4 @@ for (i = 'a'; i <= 'z'; i++)
 putchar(i);
 putchar('\n');
 }
-
-return (0);
 }
