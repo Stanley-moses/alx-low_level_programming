@@ -1,13 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
-* _isalpha - Check Holberton
+* _isalpha - Check for alphabets
 * @c: An input character
 * Description: function returns 1 if the character is a
 * letter, lowercase or uppercase.
-* Return: 1 or 0 in otherwise
+* Return: 1 if alphabet or 0 in otherwise
 */
 
 int _isalpha(int c)
