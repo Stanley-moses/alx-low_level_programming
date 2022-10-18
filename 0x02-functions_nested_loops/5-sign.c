@@ -8,7 +8,7 @@
 * -1 if number is negative
 */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 int value;
 
