@@ -4,8 +4,10 @@
 * _strcpy - a function that copies the string pointed to by src
 * including the terminating null byte (10)
 * to the buffer pointed to by dest
+*
 * @dest: A pointer to destination of string
 * @src: A pointer to source string to copy from
+*
 * Return: pointer to dest
 */
 
