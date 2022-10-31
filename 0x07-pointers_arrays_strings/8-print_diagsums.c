@@ -11,16 +11,16 @@
 
 void print_diagsums(int *a, int size)
 {
-int e, f, g, h = 0, i = 0;
-for (e = 0; e < size; e++)
+  int i, j, p, l = 0, r = 0;
+for (i = 0; i < size; i++)
 {
-g = (e * size) + e;
-h += *(a + g);
+p = (i * size) + i;
+l += *(a + p);
 }
-for (f = 0; f < size; f++)
+for (j = 0; j < size; j++)
 {
-g = (f * size) + (size - 1 - f);
-i += *(a + g);
+p = (j * size) + (size - 1 - j);
+r += *(a + p);
 }
-printf("%e, %e\n", h, i);
+printf("%i, %i\n", l, r);
 }
