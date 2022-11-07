@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 
-void util(char **, char *);
-void create_word(char **, char *, int, int, int);
+void util(char **, char *)
+void create_word(char **, char *, int, int, int)
 
 /**
 * strtow - a function that splits a string
