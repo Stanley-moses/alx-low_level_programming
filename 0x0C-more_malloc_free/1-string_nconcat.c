@@ -13,11 +13,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 char *new_str;
 unsigned int a = 0, lens1 = 0, lens2 = 0;
 if (s1 == NULL)
-s1 = " ";
+s1 = ' ';
 while (s1[lens1])
 lens1++;
 if (s2 == NULL)
-s2 = " ";
+s2 = ' ';
 while (s2[lens2])
 lens2++;
 if (n >= lens2)
