@@ -10,33 +10,28 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int a, b, c;
-char *s;
+char *new_str;
+unsigned int a = 0, lens1 = 0, lens2 = 0;
 if (s1 == NULL)
-{
-a = 0;
-}
-else
-{
-for (a = 0; s1[a]; a++)
-;
-}
+s1 = " ";
+while (s1[lens1])
+lens1++;
 if (s2 == NULL)
-{
-b = 0;
-}
-else
-{
-for (b = 0; s2[b]; b++)
-;
-}
-if (b > n)
-b = n;
-s = malloc(sizeof(char) * (a + b + 1));
-if (s == NULL)
+s2 = " ";
+while (s2[lens2])
+lens2++;
+if (n >= lens2)
+n = lens2;
+new_str = malloc(lens1 + n + 1);
+if (new_str == NULL)
 return (NULL);
-for (c = 0; c < b; c++)
-s[c + a] = s2[c];
-s[a + b] = '\0';
-return (s);
+for (; a < (lens1 + n); a++)
+{
+if (a < lens1)
+new_str[a] = *s1, s1++;
+else
+new_str[a] = *s2, s2++;
+}
+new_str[a] = '\0';
+return (new_str);
 }
