@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#imclude < stdlib.h >
+#include <stdlib.h>
 #include <string.h>
 
 /**
