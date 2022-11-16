@@ -2,45 +2,34 @@
 #include <stdlib.h>
 
 /**
-* print_opcodes - a function that prints opcodes
-* @a: address of main function
-* @n: number of bytes
-* Return: void
-*/
-
-void print_opcodes(char *a, int n)
-{
-int b;
-for (b = 0; b < n; b++)
-{
-printf("%.2hhx", a[b]);
-if (b < n - 1)
-printf(" ");
-}
-printf("\n");
-}
-
-/**
 * main - a function that prints opcodes
-* @argc: argument count
-* @argv: arrays of pointers
-* Return: 0
+* @argc: address of main function
+* @argv: number of bytes
+* Return: 0 on success, otherwise 1 or 2
 */
 
-int main(int argc, char *argv)
+void main(int argc, char *argv[])
 {
-int n;
+int bytes, b;
+unsigned char *func_ptr;
 if (argc != 2)
 {
 printf("Error\n");
 exit(1);
 }
-n = atoi(argv[1]);
-if (n < 0)
+bytes = atoi(argv[1]);
+if (bytes < 0)
 {
 printf("Error\n");
 exit(2);
 }
-print_opcodes((char *)&main, n);
+func_ptr = (unsigned char *)main;
+b = 0;
+if (bytes > 0)
+{
+while (b < (bytes - 1))
+printf("%02hhx ", func_ptr[b++]);
+printf("%hhx\n", func_ptr[b]);
+}
 return (0);
 }
