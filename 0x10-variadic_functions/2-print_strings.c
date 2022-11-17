@@ -1,4 +1,7 @@
-#imclude "variadic_functions.h"
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "variadic_functions.h"
 
 /**
 * print_strings - a function that prints strings
@@ -26,6 +29,6 @@ continue;
 if (a < n - 1)
 printf("%s", separator);
 }
-printf('\n');
+printf("\n");
 va_end(ap);
 }
