@@ -1,4 +1,7 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
 * print_all - a function that prints all
@@ -8,43 +11,42 @@
 
 void print_all(const char * const format, ...)
 {
-int i;
-int flag;
+int i = 0;
 char *str;
-va_list a_list;
-va_start(a_list, format);
-i = 0;
-while (format != NULL && format[i] != '\0')
+va_list ap;
+va_start(ap, format);
+while (format == NULL)
+{
+printf("\n");
+return;
+}
+while (format[i])
 {
 switch (format[i])
 {
 case 'c':
-printf("%c", va_arg(a_list, int));
-flag = 0;
+printf("%c", (char) va_arg(ap, int));
 break;
 case 'i':
-printf("%i", va_arg(a_list, int));
-flag = 0;
+printf("%d", va_arg(ap, int));
 break;
 case 'f':
-printf("%F", va_arg(a_list, double));
-flag = 0;
+printf("%f", (float) va_arg(ap, double));
 break;
 case 's':
-str = va_arg(a_list, char*);
-if (str == NULL)
-str = "(nil)";
+str = va_arg(ap, char*);
+if (str != NULL)
+{
 printf("%s", str);
-flag = 0;
-break;
-default:
-flag = 1;
 break;
 }
-if (format[i + 1] != '\0' && flag == 0)
+printf("(nil)");
+break;
+}
+if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's') && format[(i + 1)] != '\0')
 printf(", ");
 i++;
 }
+va_end(ap);
 printf("\n");
-va_end(a_list);
 }
