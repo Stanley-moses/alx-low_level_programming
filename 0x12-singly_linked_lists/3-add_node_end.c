@@ -5,11 +5,11 @@
 
 /**
 * _strlen - a function that finds the length of a string
-* @s: string to find length
+* @str: string to find length
 * Return: length of string
 */
 
-unsigned int _strlen(char *s)
+unsigned int _strlen(char *str)
 {
 unsigned int a;
 for (a = 0; str[a]; a++)
