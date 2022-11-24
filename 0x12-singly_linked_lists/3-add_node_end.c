@@ -11,9 +11,10 @@
 
 unsigned int _strlen(char *str)
 {
-unsigned int a;
-for (a = 0; str[a]; a++)
-return (a);
+unsigned int i;
+for (i = 0; str[i]; i++)
+;
+return (i);
 }
 
 /**
