@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#incluse "lists.h"
+#include "lists.h"
 
 /**
 * free_list - a function that frees list
