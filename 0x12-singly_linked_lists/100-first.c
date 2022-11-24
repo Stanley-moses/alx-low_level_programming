@@ -2,7 +2,7 @@
 
 /* Using constructors in C */
 
-void main_constructor(void) __attribute__((constructor));
+void main_constructor(void) __attribute__((constructor))
 /**
 * main_constructor - a function that prints a message
 * Return: Nothing
