@@ -14,7 +14,7 @@ int i;
 if (head == NULL || *head == NULL)
 return (0);
 start = *head;
-*head = star->next;
+*head = start->next;
 i = start->i;
 free(start);
 return (i);
