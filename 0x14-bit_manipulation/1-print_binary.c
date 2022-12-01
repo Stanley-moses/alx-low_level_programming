@@ -28,7 +28,7 @@ void print_binary(unsigned long int n)
 unsigned long int dev, result;
 char flag;
 flag = 0;
-dev = _power(2, sizeof(unsinged long int) * 8 - 1);
+dev = _power(2, sizeof(unsigned long int) * 8 - 1);
 while (dev != 0)
 {
 result = n & dev;
