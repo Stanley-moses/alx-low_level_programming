@@ -1,2 +1,1 @@
-# alx-low_level_programming
-An introduction to low level programming language
+This directory is about bit manipulation in C
